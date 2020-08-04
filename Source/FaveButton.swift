@@ -92,6 +92,10 @@ open class FaveButton: UIButton {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    open override func awakeFromNib() {
+        super.awakeFromNib()
         applyInit()
     }
     
