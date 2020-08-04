@@ -197,7 +197,7 @@ extension FaveButton{
             return
         }
         
-        let delay = DispatchTime.now() + Double(Int64(Double(NSEC_PER_SEC) * Const.duration)) / Double(NSEC_PER_SEC)
+        let delay = DispatchTime.now() + 0.2
         DispatchQueue.main.asyncAfter(deadline: delay){
             delegate.faveButton(sender, didSelected: sender.isSelected)
         }
