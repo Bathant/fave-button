@@ -56,7 +56,8 @@ open class FaveButton: UIButton {
     @IBInspectable open var dotSecondColor: UIColor  = UIColor(red: 247/255, green: 188/255, blue: 48/255,  alpha: 1)
     @IBInspectable open var circleFromColor: UIColor = UIColor(red: 221/255, green: 70/255,  blue: 136/255, alpha: 1)
     @IBInspectable open var circleToColor: UIColor   = UIColor(red: 205/255, green: 143/255, blue: 246/255, alpha: 1)
-    
+    @IBInspectable open var selectedImage: UIImage?
+
     @IBOutlet open weak var delegate: AnyObject?
     
     fileprivate(set) var sparkGroupCount: Int = 7
@@ -145,7 +146,7 @@ extension FaveButton{
     
     
     fileprivate func createFaveIcon(_ faveIconImage: UIImage) -> FaveIcon{
-        return FaveIcon.createFaveIcon(self, icon: faveIconImage,color: normalColor)
+        return FaveIcon.createFaveIcon(self, icon: faveIconImage, color: normalColor, selectedIcon: selectedImage)
     }
     
     
